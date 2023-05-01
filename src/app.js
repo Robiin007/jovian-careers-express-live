@@ -26,6 +26,10 @@ app.get('/jobs/:id', (req, res) => {
     res.render('job', { job: matchedJob});
 })
 
+app.post('/jobs/:id/apply', (req, res) => {
+    res.send("Got the Application")
+})
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
